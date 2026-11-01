@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakery & Cafe Web Collection | Client Presentation Showcase</title>
-    <link rel="icon" href="Baker/img/favicon.ico">
+    <link rel="icon" href="/Baker/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
         .hero {
             background: radial-gradient(circle at 10% 20%, #3d2721 0%, #201411 90%);
             color: #ffffff;
-            padding: 80px 20px 70px;
+            padding: 70px 20px 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -74,7 +74,7 @@
             font-size: 0.85rem;
             font-weight: 600;
             color: #ffd8c0;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             border: 1px solid rgba(255, 255, 255, 0.15);
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -82,7 +82,7 @@
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
             font-weight: 700;
             line-height: 1.15;
             margin-bottom: 18px;
@@ -96,9 +96,39 @@
 
         .hero p {
             max-width: 680px;
-            margin: 0 auto 36px;
+            margin: 0 auto 30px;
             color: #e0d0c5;
             font-size: clamp(1rem, 2vw, 1.15rem);
+        }
+
+        .direct-nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .direct-nav-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .direct-nav-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            color: #ffffff;
         }
 
         .stats-bar {
@@ -133,12 +163,12 @@
         .container {
             max-width: 1240px;
             margin: 0 auto;
-            padding: 60px 24px 80px;
+            padding: 50px 24px 70px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .section-subtitle {
@@ -162,7 +192,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 36px;
-            margin-bottom: 80px;
+            margin-bottom: 70px;
         }
 
         .project-card {
@@ -229,7 +259,7 @@
         }
 
         .card-body {
-            padding: 30px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -238,22 +268,22 @@
         .card-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--secondary);
         }
 
         .card-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            font-size: 0.94rem;
+            margin-bottom: 18px;
+            line-height: 1.55;
         }
 
         .feature-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
 
         .tag {
@@ -265,18 +295,58 @@
             border-radius: 6px;
         }
 
+        /* Direct URL Box */
+        .url-box {
+            background: #f8f5f0;
+            border: 1px solid #ebdcd0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .url-text {
+            font-family: monospace;
+            font-size: 0.82rem;
+            color: var(--secondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
         .page-links-list {
-            margin-bottom: 24px;
-            padding-top: 16px;
+            margin-bottom: 22px;
+            padding-top: 14px;
             border-top: 1px dashed var(--border);
         }
 
         .page-links-title {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
 
@@ -304,7 +374,7 @@
         .card-actions {
             margin-top: auto;
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn {
@@ -312,10 +382,10 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 12px 20px;
+            padding: 12px 18px;
             border-radius: var(--radius-md);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             text-decoration: none;
             transition: all 0.25s ease;
             cursor: pointer;
@@ -332,6 +402,7 @@
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(212, 107, 56, 0.35);
+            color: #ffffff;
         }
 
         .btn-secondary {
@@ -347,7 +418,7 @@
         .preview-section {
             background: #ffffff;
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 36px;
             border: 1px solid var(--border);
             box-shadow: var(--shadow-md);
             margin-bottom: 70px;
@@ -359,8 +430,8 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 16px;
-            margin-bottom: 24px;
-            padding-bottom: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 18px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -368,6 +439,7 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .site-tab-btn {
@@ -389,6 +461,31 @@
             background: var(--primary);
             color: #ffffff;
             box-shadow: 0 4px 12px rgba(212, 107, 56, 0.25);
+        }
+
+        .right-controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .open-tab-btn {
+            background: #f5f0eb;
+            color: var(--secondary);
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .open-tab-btn:hover {
+            background: #e5ded6;
         }
 
         .device-selector {
@@ -422,8 +519,8 @@
 
         .iframe-container {
             width: 100%;
-            height: 750px;
-            background: #f8f9fa;
+            height: 780px;
+            background: #ffffff;
             border-radius: var(--radius-md);
             overflow: hidden;
             border: 1px solid #dcd3cb;
@@ -447,6 +544,34 @@
             width: 100%;
             height: 100%;
             border: none;
+            background: #ffffff;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #2b1f1d;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Comparison Table */
@@ -519,7 +644,7 @@
                 padding: 24px 16px;
             }
             .iframe-container {
-                height: 520px;
+                height: 540px;
             }
         }
     </style>
@@ -532,8 +657,14 @@
             <i class="fa-solid fa-cookie-bite"></i> Premium Bakery & Food Collection
         </div>
         <h1>Artisan Bakery & Cafe <br><span>Website Collection</span></h1>
-        <p>A client presentation portal featuring 3 production-ready, fully responsive food & beverage website templates ready for live deployment on Vercel.</p>
+        <p>A client presentation portal featuring 3 production-ready, fully responsive food & beverage website templates deployed live on Vercel.</p>
         
+        <div class="direct-nav-bar">
+            <a href="/Baker/" target="_blank" class="direct-nav-btn"><i class="fa-solid fa-bread-slice"></i> Baker (8 Pages)</a>
+            <a href="/CakeZone/" target="_blank" class="direct-nav-btn"><i class="fa-solid fa-cake-candles"></i> CakeZone (7 Pages)</a>
+            <a href="/ice-cream-shop-website-template/" target="_blank" class="direct-nav-btn"><i class="fa-solid fa-ice-cream"></i> iCREAM (6 Pages)</a>
+        </div>
+
         <div class="stats-bar">
             <div class="stat-item">
                 <div class="stat-num">3</div>
@@ -549,7 +680,7 @@
             </div>
             <div class="stat-item">
                 <div class="stat-num"><i class="fa-solid fa-bolt" style="font-size: 1.5rem; color:#ffd8c0;"></i></div>
-                <div class="stat-label">Vercel Ready</div>
+                <div class="stat-label">Live on Vercel</div>
             </div>
         </div>
     </header>
@@ -568,7 +699,7 @@
                 <!-- Website 1: Baker -->
                 <article class="project-card">
                     <div class="card-preview-wrap">
-                        <img src="Baker/Baker.jpg" alt="Baker Website Preview" class="card-preview-img">
+                        <img src="/Baker/Baker.jpg" alt="Baker Website Preview" class="card-preview-img">
                         <span class="badge-category"><i class="fa-solid fa-bread-slice"></i> Bakery & Bread</span>
                         <span class="badge-pages">8 Pages</span>
                     </div>
@@ -583,23 +714,31 @@
                             <span class="tag">Google Map</span>
                         </div>
 
+                        <!-- Direct Client Link Box -->
+                        <div class="url-box">
+                            <span class="url-text" id="url-baker">https://bakery-sites.vercel.app/Baker/</span>
+                            <button class="copy-btn" onclick="copyLink('/Baker/')">
+                                <i class="fa-regular fa-copy"></i> Copy Link
+                            </button>
+                        </div>
+
                         <div class="page-links-list">
                             <span class="page-links-title">Quick Page Links:</span>
                             <div class="pages-pills">
-                                <a href="Baker/index.html">Home</a>
-                                <a href="Baker/about.html">About</a>
-                                <a href="Baker/product.html">Products</a>
-                                <a href="Baker/service.html">Services</a>
-                                <a href="Baker/team.html">Bakers Team</a>
-                                <a href="Baker/contact.html">Contact</a>
+                                <a href="/Baker/index.html" target="_blank">Home</a>
+                                <a href="/Baker/about.html" target="_blank">About</a>
+                                <a href="/Baker/product.html" target="_blank">Products</a>
+                                <a href="/Baker/service.html" target="_blank">Services</a>
+                                <a href="/Baker/team.html" target="_blank">Bakers Team</a>
+                                <a href="/Baker/contact.html" target="_blank">Contact</a>
                             </div>
                         </div>
 
                         <div class="card-actions">
-                            <a href="Baker/index.html" target="_blank" class="btn btn-primary">
+                            <a href="/Baker/" target="_blank" class="btn btn-primary">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
                             </a>
-                            <button class="btn btn-secondary" onclick="switchPreview('Baker/index.html', 'Baker')">
+                            <button class="btn btn-secondary" onclick="switchPreview('/Baker/', 'Baker')">
                                 <i class="fa-solid fa-eye"></i> Preview
                             </button>
                         </div>
@@ -609,7 +748,7 @@
                 <!-- Website 2: CakeZone -->
                 <article class="project-card">
                     <div class="card-preview-wrap">
-                        <img src="CakeZone/CakeZone.jpg" alt="CakeZone Website Preview" class="card-preview-img">
+                        <img src="/CakeZone/CakeZone.jpg" alt="CakeZone Website Preview" class="card-preview-img">
                         <span class="badge-category"><i class="fa-solid fa-cake-candles"></i> Cake Boutique</span>
                         <span class="badge-pages">7 Pages</span>
                     </div>
@@ -624,23 +763,31 @@
                             <span class="tag">Master Chefs</span>
                         </div>
 
+                        <!-- Direct Client Link Box -->
+                        <div class="url-box">
+                            <span class="url-text" id="url-cakezone">https://bakery-sites.vercel.app/CakeZone/</span>
+                            <button class="copy-btn" onclick="copyLink('/CakeZone/')">
+                                <i class="fa-regular fa-copy"></i> Copy Link
+                            </button>
+                        </div>
+
                         <div class="page-links-list">
                             <span class="page-links-title">Quick Page Links:</span>
                             <div class="pages-pills">
-                                <a href="CakeZone/index.html">Home</a>
-                                <a href="CakeZone/about.html">About</a>
-                                <a href="CakeZone/menu.html">Menu & Pricing</a>
-                                <a href="CakeZone/service.html">Services</a>
-                                <a href="CakeZone/team.html">Master Chefs</a>
-                                <a href="CakeZone/contact.html">Contact</a>
+                                <a href="/CakeZone/index.html" target="_blank">Home</a>
+                                <a href="/CakeZone/about.html" target="_blank">About</a>
+                                <a href="/CakeZone/menu.html" target="_blank">Menu & Pricing</a>
+                                <a href="/CakeZone/service.html" target="_blank">Services</a>
+                                <a href="/CakeZone/team.html" target="_blank">Master Chefs</a>
+                                <a href="/CakeZone/contact.html" target="_blank">Contact</a>
                             </div>
                         </div>
 
                         <div class="card-actions">
-                            <a href="CakeZone/index.html" target="_blank" class="btn btn-primary">
+                            <a href="/CakeZone/" target="_blank" class="btn btn-primary">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
                             </a>
-                            <button class="btn btn-secondary" onclick="switchPreview('CakeZone/index.html', 'CakeZone')">
+                            <button class="btn btn-secondary" onclick="switchPreview('/CakeZone/', 'CakeZone')">
                                 <i class="fa-solid fa-eye"></i> Preview
                             </button>
                         </div>
@@ -650,7 +797,7 @@
                 <!-- Website 3: iCREAM -->
                 <article class="project-card">
                     <div class="card-preview-wrap">
-                        <img src="ice-cream-shop-website-template/ice-cream-shop-website-template.jpg" alt="iCREAM Website Preview" class="card-preview-img">
+                        <img src="/ice-cream-shop-website-template/ice-cream-shop-website-template.jpg" alt="iCREAM Website Preview" class="card-preview-img">
                         <span class="badge-category"><i class="fa-solid fa-ice-cream"></i> Ice Cream & Desserts</span>
                         <span class="badge-pages">6 Pages</span>
                     </div>
@@ -665,23 +812,31 @@
                             <span class="tag">Online Delivery CTAs</span>
                         </div>
 
+                        <!-- Direct Client Link Box -->
+                        <div class="url-box">
+                            <span class="url-text" id="url-icream">https://bakery-sites.vercel.app/ice-cream-shop-website-template/</span>
+                            <button class="copy-btn" onclick="copyLink('/ice-cream-shop-website-template/')">
+                                <i class="fa-regular fa-copy"></i> Copy Link
+                            </button>
+                        </div>
+
                         <div class="page-links-list">
                             <span class="page-links-title">Quick Page Links:</span>
                             <div class="pages-pills">
-                                <a href="ice-cream-shop-website-template/index.html">Home</a>
-                                <a href="ice-cream-shop-website-template/about.html">About</a>
-                                <a href="ice-cream-shop-website-template/product.html">Products</a>
-                                <a href="ice-cream-shop-website-template/service.html">Services</a>
-                                <a href="ice-cream-shop-website-template/gallery.html">Photo Gallery</a>
-                                <a href="ice-cream-shop-website-template/contact.html">Contact</a>
+                                <a href="/ice-cream-shop-website-template/index.html" target="_blank">Home</a>
+                                <a href="/ice-cream-shop-website-template/about.html" target="_blank">About</a>
+                                <a href="/ice-cream-shop-website-template/product.html" target="_blank">Products</a>
+                                <a href="/ice-cream-shop-website-template/service.html" target="_blank">Services</a>
+                                <a href="/ice-cream-shop-website-template/gallery.html" target="_blank">Photo Gallery</a>
+                                <a href="/ice-cream-shop-website-template/contact.html" target="_blank">Contact</a>
                             </div>
                         </div>
 
                         <div class="card-actions">
-                            <a href="ice-cream-shop-website-template/index.html" target="_blank" class="btn btn-primary">
+                            <a href="/ice-cream-shop-website-template/" target="_blank" class="btn btn-primary">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
                             </a>
-                            <button class="btn btn-secondary" onclick="switchPreview('ice-cream-shop-website-template/index.html', 'iCREAM')">
+                            <button class="btn btn-secondary" onclick="switchPreview('/ice-cream-shop-website-template/', 'iCREAM')">
                                 <i class="fa-solid fa-eye"></i> Preview
                             </button>
                         </div>
@@ -695,33 +850,38 @@
         <section class="preview-section" id="preview-panel">
             <div class="preview-controls">
                 <div class="site-selector">
-                    <span style="font-weight: 700; align-self: center; margin-right: 6px; color: var(--secondary);"><i class="fa-solid fa-laptop-code"></i> Live Preview:</span>
-                    <button class="site-tab-btn active" onclick="switchPreview('Baker/index.html', 'Baker')">
+                    <span style="font-weight: 700; margin-right: 6px; color: var(--secondary);"><i class="fa-solid fa-laptop-code"></i> Live Preview:</span>
+                    <button class="site-tab-btn active" onclick="switchPreview('/Baker/', 'Baker')">
                         <i class="fa-solid fa-bread-slice"></i> Baker
                     </button>
-                    <button class="site-tab-btn" onclick="switchPreview('CakeZone/index.html', 'CakeZone')">
+                    <button class="site-tab-btn" onclick="switchPreview('/CakeZone/', 'CakeZone')">
                         <i class="fa-solid fa-cake-candles"></i> CakeZone
                     </button>
-                    <button class="site-tab-btn" onclick="switchPreview('ice-cream-shop-website-template/index.html', 'iCREAM')">
+                    <button class="site-tab-btn" onclick="switchPreview('/ice-cream-shop-website-template/', 'iCREAM')">
                         <i class="fa-solid fa-ice-cream"></i> iCREAM
                     </button>
                 </div>
 
-                <div class="device-selector">
-                    <button class="device-btn active" onclick="setDevice('desktop')">
-                        <i class="fa-solid fa-desktop"></i> Desktop
-                    </button>
-                    <button class="device-btn" onclick="setDevice('tablet')">
-                        <i class="fa-solid fa-tablet-screen-button"></i> Tablet
-                    </button>
-                    <button class="device-btn" onclick="setDevice('mobile')">
-                        <i class="fa-solid fa-mobile-screen"></i> Mobile
-                    </button>
+                <div class="right-controls">
+                    <a id="open-preview-external" href="/Baker/" target="_blank" class="open-tab-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+                    </a>
+                    <div class="device-selector">
+                        <button class="device-btn active" onclick="setDevice('desktop')">
+                            <i class="fa-solid fa-desktop"></i> Desktop
+                        </button>
+                        <button class="device-btn" onclick="setDevice('tablet')">
+                            <i class="fa-solid fa-tablet-screen-button"></i> Tablet
+                        </button>
+                        <button class="device-btn" onclick="setDevice('mobile')">
+                            <i class="fa-solid fa-mobile-screen"></i> Mobile
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="iframe-container" id="frame-wrap">
-                <iframe id="live-frame" src="Baker/index.html" title="Live Preview"></iframe>
+                <iframe id="live-frame" src="/Baker/" title="Live Preview"></iframe>
             </div>
         </section>
 
@@ -743,6 +903,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td><strong>Direct Live URL</strong></td>
+                            <td><code>/Baker/</code></td>
+                            <td><code>/CakeZone/</code></td>
+                            <td><code>/ice-cream-shop-website-template/</code></td>
+                        </tr>
                         <tr>
                             <td><strong>Primary Focus</strong></td>
                             <td>Artisan Bakery & Pastries</td>
@@ -792,15 +958,30 @@
 
     </main>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+        <span>Link copied to clipboard!</span>
+    </div>
+
     <footer>
-        <p>Bakery & Cafe Web Collection &bull; Ready for Vercel Deployment & GitHub Version Control</p>
+        <p>Bakery & Cafe Web Collection &bull; Live on Vercel & GitHub</p>
         <p style="margin-top: 8px; font-size: 0.8rem; color: #8e7c75;">Generated for client presentation and demonstration.</p>
     </footer>
 
     <script>
+        // Update direct URLs dynamically based on current origin
+        const currentOrigin = window.location.origin;
+        document.getElementById('url-baker').textContent = currentOrigin + '/Baker/';
+        document.getElementById('url-cakezone').textContent = currentOrigin + '/CakeZone/';
+        document.getElementById('url-icream').textContent = currentOrigin + '/ice-cream-shop-website-template/';
+
         function switchPreview(url, siteName) {
             const frame = document.getElementById('live-frame');
             frame.src = url;
+
+            const externalLink = document.getElementById('open-preview-external');
+            externalLink.href = url;
             
             // Update active tab
             document.querySelectorAll('.site-tab-btn').forEach(btn => {
@@ -827,7 +1008,24 @@
                 }
             });
         }
+
+        function copyLink(path) {
+            const fullUrl = window.location.origin + path;
+            navigator.clipboard.writeText(fullUrl).then(() => {
+                showToast('Copied: ' + fullUrl);
+            }).catch(() => {
+                showToast('Copied to clipboard!');
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.querySelector('span').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
     </script>
 </body>
 </html>
-
