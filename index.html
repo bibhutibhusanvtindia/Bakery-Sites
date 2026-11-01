@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery & Cafe Web Collection | Client Presentation Showcase</title>
+    <link rel="icon" href="Baker/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d46b38;
+            --primary-dark: #b85423;
+            --primary-light: #fef4ee;
+            --secondary: #2b1f1d;
+            --accent: #e59866;
+            --bg-light: #faf7f2;
+            --card-bg: #ffffff;
+            --text-dark: #1f2421;
+            --text-muted: #6c757d;
+            --border: #eedfd2;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow-sm: 0 4px 12px rgba(43, 31, 29, 0.05);
+            --shadow-md: 0 10px 30px rgba(43, 31, 29, 0.08);
+            --shadow-lg: 0 20px 45px rgba(43, 31, 29, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: radial-gradient(circle at 10% 20%, #3d2721 0%, #201411 90%);
+            color: #ffffff;
+            padding: 80px 20px 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 107, 56, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ffd8c0;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: #f7a97b;
+            font-style: italic;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 36px;
+            color: #e0d0c5;
+            font-size: clamp(1rem, 2vw, 1.15rem);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffc29b;
+        }
+
+        .stat-label {
+            font-size: 0.82rem;
+            color: #b5a59c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        /* Project Cards Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 36px;
+            margin-bottom: 80px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: #d46b38;
+        }
+
+        .card-preview-wrap {
+            position: relative;
+            height: 240px;
+            background: #ede6de;
+            overflow: hidden;
+        }
+
+        .card-preview-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .card-preview-img {
+            transform: scale(1.05);
+        }
+
+        .badge-category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(32, 20, 17, 0.85);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-pages {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .page-links-list {
+            margin-bottom: 24px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .page-links-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .pages-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pages-pills a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #495057;
+            background: #f1ede8;
+            padding: 3px 9px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .pages-pills a:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .card-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 107, 56, 0.35);
+        }
+
+        .btn-secondary {
+            background: #f0ebe4;
+            color: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: #e2d9cf;
+        }
+
+        /* Live Interactive Preview Box */
+        .preview-section {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 70px;
+        }
+
+        .preview-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .site-selector {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .site-tab-btn {
+            padding: 10px 18px;
+            border-radius: var(--radius-md);
+            background: #f5f0eb;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .site-tab-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(212, 107, 56, 0.25);
+        }
+
+        .device-selector {
+            display: flex;
+            gap: 6px;
+            background: #f5f0eb;
+            padding: 4px;
+            border-radius: var(--radius-md);
+        }
+
+        .device-btn {
+            background: transparent;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .device-btn.active {
+            background: #ffffff;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 750px;
+            background: #f8f9fa;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid #dcd3cb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+            transition: max-width 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .iframe-container.tablet {
+            max-width: 768px;
+        }
+
+        .iframe-container.mobile {
+            max-width: 375px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Comparison Table */
+        .specs-section {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border);
+            margin-bottom: 70px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: #fbf7f3;
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.92rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: #28a745;
+            margin-right: 6px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: #b5a59c;
+            padding: 50px 20px 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffc29b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .preview-section {
+                padding: 24px 16px;
+            }
+            .iframe-container {
+                height: 520px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="badge-pill">
+            <i class="fa-solid fa-cookie-bite"></i> Premium Bakery & Food Collection
+        </div>
+        <h1>Artisan Bakery & Cafe <br><span>Website Collection</span></h1>
+        <p>A client presentation portal featuring 3 production-ready, fully responsive food & beverage website templates ready for live deployment on Vercel.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Full Websites</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">21</div>
+                <div class="stat-label">Total Pages</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Mobile Responsive</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num"><i class="fa-solid fa-bolt" style="font-size: 1.5rem; color:#ffd8c0;"></i></div>
+                <div class="stat-label">Vercel Ready</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Projects Grid Section -->
+        <section>
+            <div class="section-header">
+                <div class="section-subtitle">Website Options</div>
+                <h2 class="section-title">Select a Website to Explore</h2>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Website 1: Baker -->
+                <article class="project-card">
+                    <div class="card-preview-wrap">
+                        <img src="Baker/Baker.jpg" alt="Baker Website Preview" class="card-preview-img">
+                        <span class="badge-category"><i class="fa-solid fa-bread-slice"></i> Bakery & Bread</span>
+                        <span class="badge-pages">8 Pages</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Baker</h3>
+                        <p class="card-desc">Modern artisan bakery & pastry shop with warm rustic styling, animated carousels, customer testimonials, and full product showcases.</p>
+                        
+                        <div class="feature-tags">
+                            <span class="tag">Bootstrap 5</span>
+                            <span class="tag">Owl Carousel</span>
+                            <span class="tag">Interactive Counters</span>
+                            <span class="tag">Google Map</span>
+                        </div>
+
+                        <div class="page-links-list">
+                            <span class="page-links-title">Quick Page Links:</span>
+                            <div class="pages-pills">
+                                <a href="Baker/index.html">Home</a>
+                                <a href="Baker/about.html">About</a>
+                                <a href="Baker/product.html">Products</a>
+                                <a href="Baker/service.html">Services</a>
+                                <a href="Baker/team.html">Bakers Team</a>
+                                <a href="Baker/contact.html">Contact</a>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="Baker/index.html" target="_blank" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
+                            </a>
+                            <button class="btn btn-secondary" onclick="switchPreview('Baker/index.html', 'Baker')">
+                                <i class="fa-solid fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 2: CakeZone -->
+                <article class="project-card">
+                    <div class="card-preview-wrap">
+                        <img src="CakeZone/CakeZone.jpg" alt="CakeZone Website Preview" class="card-preview-img">
+                        <span class="badge-category"><i class="fa-solid fa-cake-candles"></i> Cake Boutique</span>
+                        <span class="badge-pages">7 Pages</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">CakeZone</h3>
+                        <p class="card-desc">Luxury cake boutique and wedding dessert atelier featuring dark/gold accents, categorized cake pricing menus, and order reservation forms.</p>
+                        
+                        <div class="feature-tags">
+                            <span class="tag">Cake Pricing Menu</span>
+                            <span class="tag">Special Discounts Banner</span>
+                            <span class="tag">Order Form</span>
+                            <span class="tag">Master Chefs</span>
+                        </div>
+
+                        <div class="page-links-list">
+                            <span class="page-links-title">Quick Page Links:</span>
+                            <div class="pages-pills">
+                                <a href="CakeZone/index.html">Home</a>
+                                <a href="CakeZone/about.html">About</a>
+                                <a href="CakeZone/menu.html">Menu & Pricing</a>
+                                <a href="CakeZone/service.html">Services</a>
+                                <a href="CakeZone/team.html">Master Chefs</a>
+                                <a href="CakeZone/contact.html">Contact</a>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="CakeZone/index.html" target="_blank" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
+                            </a>
+                            <button class="btn btn-secondary" onclick="switchPreview('CakeZone/index.html', 'CakeZone')">
+                                <i class="fa-solid fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 3: iCREAM -->
+                <article class="project-card">
+                    <div class="card-preview-wrap">
+                        <img src="ice-cream-shop-website-template/ice-cream-shop-website-template.jpg" alt="iCREAM Website Preview" class="card-preview-img">
+                        <span class="badge-category"><i class="fa-solid fa-ice-cream"></i> Ice Cream & Desserts</span>
+                        <span class="badge-pages">6 Pages</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">iCREAM</h3>
+                        <p class="card-desc">Vibrant and playful parlor template for gourmet gelato, frozen treats, and sundaes, complete with an interactive filterable photo lightbox gallery.</p>
+                        
+                        <div class="feature-tags">
+                            <span class="tag">Lightbox Gallery</span>
+                            <span class="tag">Isotope Filter</span>
+                            <span class="tag">Flavor Menu</span>
+                            <span class="tag">Online Delivery CTAs</span>
+                        </div>
+
+                        <div class="page-links-list">
+                            <span class="page-links-title">Quick Page Links:</span>
+                            <div class="pages-pills">
+                                <a href="ice-cream-shop-website-template/index.html">Home</a>
+                                <a href="ice-cream-shop-website-template/about.html">About</a>
+                                <a href="ice-cream-shop-website-template/product.html">Products</a>
+                                <a href="ice-cream-shop-website-template/service.html">Services</a>
+                                <a href="ice-cream-shop-website-template/gallery.html">Photo Gallery</a>
+                                <a href="ice-cream-shop-website-template/contact.html">Contact</a>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="ice-cream-shop-website-template/index.html" target="_blank" class="btn btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Site
+                            </a>
+                            <button class="btn btn-secondary" onclick="switchPreview('ice-cream-shop-website-template/index.html', 'iCREAM')">
+                                <i class="fa-solid fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Live Interactive Preview Panel -->
+        <section class="preview-section" id="preview-panel">
+            <div class="preview-controls">
+                <div class="site-selector">
+                    <span style="font-weight: 700; align-self: center; margin-right: 6px; color: var(--secondary);"><i class="fa-solid fa-laptop-code"></i> Live Preview:</span>
+                    <button class="site-tab-btn active" onclick="switchPreview('Baker/index.html', 'Baker')">
+                        <i class="fa-solid fa-bread-slice"></i> Baker
+                    </button>
+                    <button class="site-tab-btn" onclick="switchPreview('CakeZone/index.html', 'CakeZone')">
+                        <i class="fa-solid fa-cake-candles"></i> CakeZone
+                    </button>
+                    <button class="site-tab-btn" onclick="switchPreview('ice-cream-shop-website-template/index.html', 'iCREAM')">
+                        <i class="fa-solid fa-ice-cream"></i> iCREAM
+                    </button>
+                </div>
+
+                <div class="device-selector">
+                    <button class="device-btn active" onclick="setDevice('desktop')">
+                        <i class="fa-solid fa-desktop"></i> Desktop
+                    </button>
+                    <button class="device-btn" onclick="setDevice('tablet')">
+                        <i class="fa-solid fa-tablet-screen-button"></i> Tablet
+                    </button>
+                    <button class="device-btn" onclick="setDevice('mobile')">
+                        <i class="fa-solid fa-mobile-screen"></i> Mobile
+                    </button>
+                </div>
+            </div>
+
+            <div class="iframe-container" id="frame-wrap">
+                <iframe id="live-frame" src="Baker/index.html" title="Live Preview"></iframe>
+            </div>
+        </section>
+
+        <!-- Features & Comparison -->
+        <section class="specs-section">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <div class="section-subtitle">Technical Overview</div>
+                <h2 class="section-title">Design & Features Comparison</h2>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th>Baker</th>
+                            <th>CakeZone</th>
+                            <th>iCREAM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primary Focus</strong></td>
+                            <td>Artisan Bakery & Pastries</td>
+                            <td>Specialty Cakes & Custom Orders</td>
+                            <td>Gelato, Ice Cream & Shakes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Subpages</strong></td>
+                            <td>8 Pages (Full Website)</td>
+                            <td>7 Pages (Full Website)</td>
+                            <td>6 Pages (Full Website)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Design Tone</strong></td>
+                            <td>Warm Rustic, Clean, Welcoming</td>
+                            <td>Dark Luxury, Elegant Gold Accent</td>
+                            <td>Pastel, Sweet, Cheerful & Fun</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Catalog / Pricing</strong></td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Grid Products with Pricing</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Categorized Menu + Specials</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Flavor Menu Cards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interactive Gallery</strong></td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Product Image Sliders</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Showcase Carousels</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Isotope Filter + Lightbox Popup</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contact & Inquiry</strong></td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Interactive Contact Form</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Online Order / Reservation</td>
+                            <td><i class="fa-solid fa-check check-icon"></i> Direct Inquiry Form</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deployment Readiness</strong></td>
+                            <td><i class="fa-solid fa-circle-check check-icon"></i> 100% Vercel / Static Ready</td>
+                            <td><i class="fa-solid fa-circle-check check-icon"></i> 100% Vercel / Static Ready</td>
+                            <td><i class="fa-solid fa-circle-check check-icon"></i> 100% Vercel / Static Ready</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Bakery & Cafe Web Collection &bull; Ready for Vercel Deployment & GitHub Version Control</p>
+        <p style="margin-top: 8px; font-size: 0.8rem; color: #8e7c75;">Generated for client presentation and demonstration.</p>
+    </footer>
+
+    <script>
+        function switchPreview(url, siteName) {
+            const frame = document.getElementById('live-frame');
+            frame.src = url;
+            
+            // Update active tab
+            document.querySelectorAll('.site-tab-btn').forEach(btn => {
+                if (btn.textContent.includes(siteName)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Smooth scroll to preview panel if clicked from cards
+            const panel = document.getElementById('preview-panel');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function setDevice(device) {
+            const wrap = document.getElementById('frame-wrap');
+            wrap.className = 'iframe-container ' + (device === 'desktop' ? '' : device);
+
+            document.querySelectorAll('.device-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(device)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

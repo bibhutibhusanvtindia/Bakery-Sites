@@ -1,0 +1,23 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor directories
+.vscode/
+.idea/
+
+# Vercel
+.vercel
+
+# Node
+node_modules/
+
+# Duplicate extract folders
+cafe-coffee-shop_1/
+vw-bakery_1/
+

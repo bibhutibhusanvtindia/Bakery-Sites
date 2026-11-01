@@ -1,0 +1,487 @@
+/*About theme*/
+.appearance_page_cafe_coffee_shop_guide #wpwrap{
+    background: #f1f3f5;
+}
+.wrapper-info {
+    margin-top: 20px;
+}
+.wrapper-info h2,
+.tab-sec h3  {
+    color: #efbe44 !important;
+    font-size: 21px !important;
+    margin: 15px 0 !important;
+    font-weight: bold !important;
+}
+.logo {
+    padding: 10px !important;
+}
+span.version {
+    font-size: 15px !important;
+    color: #333 !important;
+}
+.tablinks img,
+.tab img{
+    width: 100% !important;
+}
+.info-link a,
+.info-link-support a,.info-link-pro a{
+    background: #efbe44 !important;
+    padding: 10px 15px !important;
+    color: #000 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    margin-right: 5px !important;
+    line-height: 1 !important;
+}
+.tc-section .info-link a:hover,
+.tc-section .info-link-pro p:hover,
+.tc-section .info-link-support a:hover,.tc-section .info-link-pro a:hover{
+    color: #fff !important;
+    background: #000 !important;
+}
+.info-link,.info-link-pro {
+    margin: 20px 0 !important;
+    text-align: center !important;
+    padding: 20px 0 !important;
+}
+.col-right .info-link,
+.logo{
+    text-align: center !important;
+}
+button.tablinks:focus {
+    outline: none !important;
+}
+.table-image {
+    padding: 20px !important;
+}
+.tab {
+    right: 10px !important;
+    border: 1px solid #ddd !important;
+    width: 20% !important;
+    height: auto !important;
+    position: fixed !important;
+}
+.tab button {
+    display: block !important;
+    font-weight: bold !important;
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    width: 100% !important;
+    padding: 10px !important;
+    text-align: start !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+    background: #f0002f !important;
+}
+.tab button:hover {
+    background-color: #000 !important;
+}
+.tab button.active {
+    background-color: #efbe44 !important;
+    color: #fff !important;
+}
+.tabcontent {
+    float: left !important;
+    padding: 0px 12px !important;
+    border: 1px solid #c3c4c7 !important;    
+}
+
+.col-tc-6 img,
+.col-pro-5 img{
+    width: 100% !important;
+}
+.col-tc-6 {
+    width: 48% !important;
+    float: left !important;
+    padding: 11px !important;
+    margin-bottom: 18px  !important;
+}
+.col-tc-6 p {
+    font-size: 14px !important;
+    text-align: justify !important;
+}
+a.get-pro {
+    color: #fff;
+    background: #f0002f !important;
+}
+.col-pro-5 {
+    width: 48% !important;
+    float: left !important;
+    padding: 10px !important;
+    margin-left: 32px  !important;
+}
+.col-pro-6 {
+    width: 40% !important;
+    float: right !important;
+}
+.col-pro-5 p {
+    color: #000 !important;
+    font-size: 14px !important;
+    text-align: justify !important;
+}
+.col-pro-6 h4 ,
+.col-pro-5 h4,
+.tab-cont h4{
+    font-size: 18px !important;
+    color: #000 !important;
+}
+.col-pro-6 li {
+    font-size: 14px !important;
+    color: #000 !important;
+    margin: 10px 0 !important;
+}
+.col-pro-6 li:before {
+    content: "\f139";
+    font-family: 'Dashicons';
+    color: #efbe44 !important;
+    font-size: 15px !important;
+    border: solid 2px !important;
+    margin-right: 15px !important;
+    border-radius: 50% !important;
+}
+.tab-cont {
+    width: 48% !important;
+    float: left !important;
+    padding: 10px !important;
+    border: 1px solid #c3c4c7 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+}
+.info-link-support {
+    margin-bottom: 30px !important;
+}
+.info-link-support p {
+    color: #000 !important;
+    font-size: 14px !important;
+    margin-bottom: 25px !important;
+}
+.pro-image {
+    /* float: left; */
+    width: 75% !important;
+    padding: 20px 0 !important;
+    margin: auto !important;
+}
+.pro-image img {
+    width: 100% !important;
+}
+/* my css */
+#tc-header {
+    padding: 12px 35px !important;
+    background-color: #fff !important;
+    position: relative !important;
+    border-bottom: 1px solid #d6e1e8 !important;
+    margin-bottom: 9px !important;
+}
+.tc-container {
+    width: 100% !important;
+    max-width: 1260px !important;
+    margin: 0 auto !important;
+}
+.tc-container #tc_demo {
+    width: 98% !important;
+}
+#tc-header .tc-logo img {
+    height: 52px !important;
+    width: auto !important;
+    display: block !important;
+}
+#tc-header > .tc-container {
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
+#tc-header .tc-header-action {
+    margin-left: auto !important;
+    -js-display: inline-flex !important;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    font-size: 13px !important;
+}
+.tc-tabs {
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 9px 0 18px !important;
+    background-color: #fff !important;
+    border: 1px solid #c3c4c7 !important;
+    border-radius: 3px !important;
+}
+.tc-tabs > ul {
+    display: flex !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 7px 20px !important;
+}
+.tc-tabs > ul > li.current-item {
+    border-bottom-color: #f0002f !important;
+}
+.tc-tabs > ul > li:first-child {
+    margin-left: 0 !important;
+}
+.tc-tabs > ul > li {
+    width: auto !important;
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+    border-bottom: 2px solid transparent !important;
+    border-top: 2px solid transparent !important;
+    text-align: center !important;
+    margin: 0 10px !important;
+    color: black !important;
+}
+.tc-tabs > ul > li > a {
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    width: auto !important;
+    padding: 10px 0 !important;
+    color: black !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    padding-left: 8px !important;
+    padding-right: 10px !important;
+}
+.tc-section-title {
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    margin: 19px 0 8px !important;
+}
+li.tablinks.active a{
+    color: #f0002f !important;
+    text-decoration: underline !important;
+    text-underline-offset: 21px !important;
+}
+li.tablinks a:focus{
+   box-shadow: none!important;
+}
+#tc_pro .col-pro-5,#tc_pro .col-pro-6 {
+    padding: 24px 24px !important;
+}
+#tc_demo .demo .theme-import, #tc_demo .demo h4, #tc_demo h2, #tc_index h2, #tc_pro h3 {
+    text-align: center !important;
+}
+.tc-columns .tc-column {
+    width: 33.33% !important;
+    padding: 12px !important;
+}
+#tc_create.tabcontent {
+   border: none !important;
+   padding: 0 !important;
+}
+#tc_create > .tab-cont:first-child {
+   margin-right: 6px !important;
+}
+#tc_create .tc-section.large-section {
+    padding: 30px 35px !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #c3c4c7;
+    background-color: #fff;
+    margin: 38px 0;
+}
+.tc-buttons {
+    margin-bottom: 25px !important;
+}
+#tc_create .tc-section.large-section h2 {
+    text-align: center !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+}
+#tc_create .tc-section.large-section p {
+    max-width: 480px !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    text-align: center !important;
+    color: #000 !important;
+    margin-bottom: 40px !important;
+}
+#tc_create .tc-btn.primary {
+    background-color: #f0002f !important;
+    color: #FFF !important;
+    margin-right: 5px !important;
+    padding: 12px !important;
+    text-decoration: none !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+#tc_demo,#tc_index,#tc_pro,#tc_create .tab-cont{
+    background: #fff !important;
+}
+
+.tab-cont p{
+    padding: 4px !important;
+}
+
+/* demo import css */
+.run-import{
+    background: #efbe44 !important;
+    padding: 15px 30px !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    border: none !important;
+    margin-top: 30px !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+.run-import a{
+    text-decoration: none !important;
+}
+.run-import:hover{
+    color: #fff !important;
+    background: #000 !important;
+}
+#tc_demo{
+    width: 50% !important;
+}
+#tc_demo h4{
+    font-size: 18px;
+    color: #000 !important;
+    line-height: 1.2 !important;
+}
+.theme-import .notice-text{
+    color: #28a745 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+.view-site, .run-import{
+    text-decoration: none !important;
+    margin: 30px 0px !important;
+}
+.demo{
+    min-height: 200px !important;
+    text-align: left !important;
+}
+.demo .note{
+    font-size: 14px !important;
+    margin-top: 2em !important;
+}
+.demo .notice-text{
+    margin-bottom: 1.5em !important;
+}
+#tc_demo{
+    display: block;
+}
+/* notice css */
+/*.cafe-coffee-shop-text{
+    padding: 14px 0;
+}*/
+.cafe-coffee-shop-notice {
+    background-color: #FFC63E !important;
+    padding: 0 20px !important;
+}
+.cafe-coffee-shop-banner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+.cafe-coffee-shop-text{
+    padding: 10px 0 10px 20px !important;
+}
+.cafe-coffee-shop-text h2 {
+    color: #D40000 !important;
+    font-size: 34px !important;
+    margin-bottom: 15px !important;
+    line-height: 36px !important;
+    margin-top: 0 !important
+}
+.cafe-coffee-shop-text p {
+    font-size: 16px !important;
+    color: #1D2327 !important;
+    font-size: 19px !important;
+    padding: 0 !important;
+}
+.cafe-coffee-shop-buttons a,#tc-header .tc-header-action a {
+    background-color: #1D2327 !important;
+    border: 1px solid #707070 !important;
+    display: inline-block !important;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    margin: 5px !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    text-align: center !important;
+}
+.cafe-coffee-shop-buttons .bundle-btn,#tc-header .tc-header-action .bundle-btn{
+  background-color: #f0002f !important;
+  border: 1px solid #f0002f !important;
+}
+.cafe-coffee-shop-image img {
+    height: 230px !important;
+    margin-bottom: -15px !important;
+}
+@media screen and (min-width:1200px) {
+    .cafe-coffee-shop-banner {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1330px) {
+    .cafe-coffee-shop-text h2 {
+        font-size: 20px !important;
+        line-height: 22px !important;
+    }
+    .cafe-coffee-shop-text p {
+        font-size: 14px !important;
+    }
+    .cafe-coffee-shop-buttons a {
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .tab-cont {
+        width: 46% !important;
+    }
+    #tc_pro .col-pro-5, #tc_pro .col-pro-6 {
+        padding: 0 !important;
+    }
+    .col-tc-6 {
+        width: 45% !important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1305px) {
+    #tc_index .col-tc-6 {
+        width: 46% !important;
+    }
+    #tc_pro .col-pro-5, #tc_pro .col-pro-6 {
+        padding: 14px 14px !important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1430px) {
+    #tc_create .tab-cont {
+        width: 47% !important;
+    }
+}

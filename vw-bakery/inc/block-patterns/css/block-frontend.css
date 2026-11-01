@@ -1,0 +1,267 @@
+.main-banner, .products-section{
+  width: auto;
+  height: auto;
+}
+/*Banner section*/
+.main-banner{
+  min-height: 650px !important;
+}
+.main-banner img{
+  background-size: cover;
+}
+.main-banner .middle-banner-content {
+  height: 0;
+  border-top: 130px solid rgb(255, 255, 255, 0.8);
+  border-bottom: 130px solid rgb(255, 255, 255, 0.8);
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  z-index: 999;
+  position: relative;
+  top: 5em;
+}
+.middle-banner-content .wp-block-group__inner-container {
+  margin: -7em auto;
+  padding: 30px;
+}
+.main-banner h1.has-text-align-center {
+  font-size: 35px !important;
+}
+/*Contact section*/
+.contact-section{
+  margin: 0 auto !important;
+  max-width: 1140px !important; 
+  position: relative;
+  top: 8.5em;
+}
+.contact-section .wp-block-cover {
+  min-height: 150px;
+}
+.main-banner .wp-block-cover__inner-container{
+  z-index: 9999;
+}
+.wp-block-columns.alignwide.contact-section {
+  gap: 0em;
+  border: 1px solid #ddd;
+}
+.wp-block-column.contact-timing {
+  font-weight: bold;
+}
+.wp-block-column.contact-timing p{
+  color: #fff !important;
+}
+.contact-call .wp-block-columns , .contact-email .wp-block-columns {
+  gap: 0em;
+}
+.wp-block-column.contact-call, .wp-block-column.contact-email{
+  border-right: solid 1px #eeeeee;
+}
+.contact-section figure.alignright.size-large{
+  border: none !important;
+}
+.contact-section a.wp-block-button__link,  .contact-section a.wp-block-button__link:hover{
+  padding: 10px 15px;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+.contact-section a.wp-block-button__link:hover{
+  background-color: #52d1cd !important;
+}
+.contact-section p.has-text-align-left.text-left.has-text-color {
+  font-size: 20px;
+  font-family: 'Merienda One', cursive;
+}
+.contact-section .wp-block-image figure.alignright{
+  margin-left: 3.5em;
+}
+.main-banner{
+  max-height: 600px;
+}
+/*product section*/
+.products-section {
+  margin: 0 auto !important;
+  max-width: 1140px !important; 
+  padding-top: 6em;
+}
+.products-section .wp-block-cover.has-background-dim:not(.has-background-gradient):before{
+  opacity: 0;
+}
+.products-section .wc-block-grid__product-title {
+  color: #4d4749;
+  font-size: 16px;
+  font-family: Merienda One;
+}
+.products-section .wc-block-grid__product-onsale {
+  display: none;
+}
+.products-section .wc-block-grid__product .wc-block-grid__product-price{
+  margin: 0 auto 0px;
+}
+.products-section span.woocommerce-Price-amount.amount {
+  color: #52d1cd;
+  font-weight: 700;
+}
+.products-section a.wp-block-button__link.add_to_cart_button {
+  text-decoration: none;
+  font-family: 'Merienda One', cursive;
+  font-style: normal;
+  text-transform: none;
+}
+.products-section .wp-block-product-category li.wc-block-grid__product a {
+  text-decoration: none !important;
+}
+.products-section .add_to_cart_button{
+  background: #ff7c93;
+  color: #fff !important;
+  font-size: 15px;
+  border-radius: 0;
+  font-family: 'Merienda One', cursive;
+  opacity: 1 !important;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+.products-section .add_to_cart_button:hover{
+  background: #52d1cd;
+  color: #fff;
+}
+.products-section  a.added_to_cart.wc-forward{
+  background: #ff7c93;
+  color: #fff !important;
+  font-size: 15px;
+  border-radius: 0;
+  font-family: 'Merienda One', cursive;
+  opacity: 1 !important;
+  padding: 10px 38px;
+}
+.products-section  a.added_to_cart.wc-forward:hover{
+  background: #52d1cd;
+  color: #fff;
+}
+.products-section .wc-block-grid__products{
+  padding: 25px;
+}
+.products-section .wc-block-grid__product{
+  border: solid 1px #eeeeee;
+  padding: 10px !important;
+  margin-left: 10px;
+  margin-right: 10px;    
+  max-width: 23% !important;
+}
+@media screen and (max-width:767px) {
+  .main-banner{
+    min-height: 98px !important;
+  }
+  .main-banner p{
+    display: none;
+  }
+  .main-banner h1.has-text-align-center {
+    font-size: 25px !important;
+    color: #fff !important;
+  }
+  .products-section{
+    padding-top: 2em;
+  }
+  .middle-banner-content .wp-block-group__inner-container{
+    padding: 0;
+  }
+  .products-section .wc-block-grid__product{
+    max-width: 100% !important;
+  }
+  .main-banner .middle-banner-content{
+    border: none !important;
+  }
+  .contact-section {
+    position: relative;
+    top: 16em;
+  }
+  .main-banner h1{
+    font-size: 25px !important;
+  }
+  .wp-block-column.con-image, .wp-block-column.con-email{
+    flex-basis: 66.66% !important;
+    flex-grow: 0;
+  }
+  .contact-section p{
+    text-align: center !important;
+  }
+  .main-banner .alignwide {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .products-section .wc-block-grid__product{
+    max-width: 100% !important;
+    margin-bottom: 10px ;
+  }
+  .wp-block-columns.alignwide.contact-section{
+    display: none;
+  }
+}
+@media screen and (max-width:781px) {
+  .main-banner .wp-block-column.is-vertically-aligned-center:nth-child(2) {
+    flex-basis: 100%!important;
+  }
+}
+@media screen and (max-width:1000px) {
+  .banner-section h1 {
+    font-size: 30px !important;
+  }
+  .main-banner .alignwide {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){ 
+  .wp-block-columns.alignwide.contact-section{
+    flex-wrap: nowrap !important;
+  }
+  .products-section .wc-block-grid__products{
+    padding: 0px;
+  }
+  .products-section .wc-block-grid__product{
+    max-width: 30% !important;
+    margin-bottom: 10px;
+  }
+  .contact-section{
+    top: 2em;
+  }
+  .contact-section .wp-block-cover {
+    min-height: 250px;
+    text-align: center;
+  }
+  .main-banner{
+    min-height: 500px !important;
+  }
+  .main-banner .middle-banner-content{
+    top: 0;
+  }
+  .contact-section p.has-text-align-left.text-left.has-text-color{
+    text-align: center;
+  }
+  .contact-section .wp-block-image figure.alignright{
+    margin: 15px 20px 15px 20px !important;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 1000px) {
+  .contact-section p.has-text-align-left.text-left.has-text-color{
+    text-align: center;
+  }
+  .contact-section .wp-block-image figure.alignright{
+    margin: 15px 0px 15px 0px !important;
+  }
+  .middle-banner-content p{
+    font-size: 14px !important;
+  }
+  .contact-section .wp-block-cover {
+      min-height: 160px;
+  }
+  .contact-section p.has-text-align-left.text-left.has-text-color {
+    font-size: 18px;
+  }
+  .wp-block-column.contact-timing p {
+    font-size: 13px !important;
+  }
+}
+

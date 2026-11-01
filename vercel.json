@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/baker", "destination": "/Baker/index.html" },
+    { "source": "/baker/:match*", "destination": "/Baker/:match*" },
+    { "source": "/cakezone", "destination": "/CakeZone/index.html" },
+    { "source": "/cakezone/:match*", "destination": "/CakeZone/:match*" },
+    { "source": "/icream", "destination": "/ice-cream-shop-website-template/index.html" },
+    { "source": "/icream/:match*", "destination": "/ice-cream-shop-website-template/:match*" },
+    { "source": "/ice-cream", "destination": "/ice-cream-shop-website-template/index.html" },
+    { "source": "/ice-cream/:match*", "destination": "/ice-cream-shop-website-template/:match*" }
+  ]
+}
