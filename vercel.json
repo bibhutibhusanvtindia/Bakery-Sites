@@ -12,3 +12,4 @@
     { "source": "/ice-cream/:match*", "destination": "/ice-cream-shop-website-template/:match*" }
   ]
 }
+
